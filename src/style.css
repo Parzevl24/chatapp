@@ -1,0 +1,26 @@
+/* src/styles.css */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto; /* Update to two rows */
+    gap: 16px;
+  }
+  
+  .chat-options {
+    grid-column: 1 / span 1;
+  }
+  
+  .messages-with-vote-3 {
+    grid-column: 2 / span 1;
+  }
+  
+  .messages-with-vote-10 {
+    grid-column: 3 / span 1;
+  }
+  
+  .add-message {
+    grid-column: 1 / span 3; /* Span across all columns */
+    grid-row: 2 / span 1;
+    margin-top: 16px;
+  }
+  

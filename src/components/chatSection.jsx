@@ -1,4 +1,4 @@
-
+// src/components/ChatSection.js
 import React, { useState } from 'react';
 import MessageBubble from './MessageBubble';
 
@@ -20,9 +20,9 @@ const ChatSection = ({ messages, onUpvote, onDismiss, onAddMessage }) => {
     messages.filter((message) => message.upvotes > votes);
 
   return (
-    <div>
-      <div>
-        <h2 className="text-xl font-semibold mb-2">All Messages</h2>
+    <div className="container">
+      <div className="chat-options">
+      <h2 className="text-xl font-semibold mb-2">All Messages</h2>
         {messages.map((message) => (
           <MessageBubble
             key={message.id}
@@ -30,13 +30,10 @@ const ChatSection = ({ messages, onUpvote, onDismiss, onAddMessage }) => {
             onUpvote={() => onUpvote(message.id)}
           />
         ))}
-        <div className="mt-4">
-          <h2 className="text-xl font-semibold mb-2">Chat Options</h2>
-          {/* Add your chat options here */}
-        </div>
+      
       </div>
 
-      <div>
+      <div className="messages-with-vote-3">
         <h2 className="text-xl font-semibold mb-2">Messages with Vote > 3</h2>
         {filteredMessages(3).map((message) => (
           <MessageBubble
@@ -47,7 +44,7 @@ const ChatSection = ({ messages, onUpvote, onDismiss, onAddMessage }) => {
         ))}
       </div>
 
-      <div>
+      <div className="messages-with-vote-10">
         <h2 className="text-xl font-semibold mb-2">Messages with Vote > 10</h2>
         {filteredMessages(10).map((message) => (
           <div key={message.id} className="relative">
@@ -65,7 +62,7 @@ const ChatSection = ({ messages, onUpvote, onDismiss, onAddMessage }) => {
         ))}
       </div>
 
-      <div>
+      <div className="add-message">
         <h2 className="text-xl font-semibold mb-2">Add a Message</h2>
         <div className="flex">
           <input
