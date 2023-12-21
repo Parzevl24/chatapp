@@ -1,11 +1,11 @@
-// src/App.js
+
 import React, { useState } from 'react';
 import ChatSection from './components/ChatSection';
 import './style.css'
 const App = () => {
   const [messages, setMessages] = useState([
     { id: 1, text: 'Hello, this is a sample message!', upvotes: 0 },
-    // Add more initial messages as needed
+
   ]);
 
   const handleUpvote = (messageId) => {
@@ -44,7 +44,7 @@ const App = () => {
             onAddMessage={handleAddMessage}
           />
         </div>
-        {/* Additional sections can be added here */}
+
       </div>
     </div>
   );

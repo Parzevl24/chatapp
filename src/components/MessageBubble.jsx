@@ -1,4 +1,4 @@
-// src/components/MessageBubble.js
+
 import React from 'react';
 import UpvoteButton from './UpvoteButton';
 

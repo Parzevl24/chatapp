@@ -1,4 +1,4 @@
-// src/components/ChatSection.js
+
 import React, { useState } from 'react';
 import MessageBubble from './MessageBubble';
 
