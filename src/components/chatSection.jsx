@@ -1,6 +1,6 @@
 // src/components/ChatSection.js
 import React, { useState } from 'react';
-import MessageBubble from './MessageBubble';
+import MessageBubble, { MessageBubble2 } from './MessageBubble';
 
 const ChatSection = ({ messages, onUpvote, onDismiss, onAddMessage }) => {
   const [newMessage, setNewMessage] = useState('');
@@ -36,7 +36,7 @@ const ChatSection = ({ messages, onUpvote, onDismiss, onAddMessage }) => {
       <div className="messages-with-vote-3">
         <h2 className="text-xl font-semibold mb-2">Messages with Vote greater than  3</h2>
         {filteredMessages(3).map((message) => (
-          <MessageBubble
+          <MessageBubble2
             key={message.id}
             message={message}
             onUpvote={() => onUpvote(message.id)}
@@ -48,7 +48,7 @@ const ChatSection = ({ messages, onUpvote, onDismiss, onAddMessage }) => {
         <h2 className="text-xl font-semibold mb-2">Messages with Vote greater than 10</h2>
         {filteredMessages(10).map((message) => (
           <div key={message.id} className="relative">
-            <MessageBubble
+            <MessageBubble2
               message={message}
               onUpvote={() => onUpvote(message.id)}
             />
