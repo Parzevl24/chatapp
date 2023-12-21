@@ -1,3 +1,6 @@
+![image](https://github.com/Parzevl24/chatapp/assets/123366143/5422b9ac-6aa3-43bc-beb5-25b44e1e8663)
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
