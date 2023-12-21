@@ -34,7 +34,7 @@ const ChatSection = ({ messages, onUpvote, onDismiss, onAddMessage }) => {
       </div>
 
       <div className="messages-with-vote-3">
-        <h2 className="text-xl font-semibold mb-2">Messages with Vote > 3</h2>
+        <h2 className="text-xl font-semibold mb-2">Messages with Vote greater than  3</h2>
         {filteredMessages(3).map((message) => (
           <MessageBubble
             key={message.id}
@@ -45,7 +45,7 @@ const ChatSection = ({ messages, onUpvote, onDismiss, onAddMessage }) => {
       </div>
 
       <div className="messages-with-vote-10">
-        <h2 className="text-xl font-semibold mb-2">Messages with Vote > 10</h2>
+        <h2 className="text-xl font-semibold mb-2">Messages with Vote greater than 10</h2>
         {filteredMessages(10).map((message) => (
           <div key={message.id} className="relative">
             <MessageBubble
